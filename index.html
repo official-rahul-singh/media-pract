@@ -7,29 +7,46 @@
    <title>Home Page</title>
 
    <!-- preload fonts -->
-   <link rel="preload" href="assets/fonts/gilroy/Gilroy-ExtraBold.otf" as="font" type="font/otf" crossorigin>
-   <link rel="preload" href="assets/fonts/poppins/poppins-v21-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-   <link rel="preload" href="assets/fonts/poppins/poppins-v21-latin-regular.ttf" as="font" type="font/ttf" crossorigin>
+   <link rel="preload" href="assets/fonts/mulish-v13-latin-regular.woff2" as="font" type="font/otf" crossorigin>
+   <link rel="preload" href="assets/fonts/mulish-v13-latin-600.woff2" as="font" type="font/otf" crossorigin>
+   <link rel="preload" href="assets/fonts/mulish-v13-latin-700.woff2" as="font" type="font/otf" crossorigin>
+   <link rel="preload" href="assets/fonts/mulish-v13-latin-800.woff2" as="font" type="font/otf" crossorigin>
 
    <link rel="stylesheet" href="./assets/css/layout.css">
    <link rel="stylesheet" href="./assets/css/style.css">
 
    <style>
+            /* mulish-regular - latin */
       @font-face {
-         font-display: swap;
-         font-family: 'Gilroy';
-         src: url('assets/fonts/gilroy/Gilroy-ExtraBold.otf') format('opentype');
-         font-weight: 800;
-         font-style: normal;
+      font-display: swap; 
+      font-family: 'Mulish';
+      font-style: normal;
+      font-weight: 400;
+      src: url('assets/fonts/mulish-v13-latin-regular.woff2') format('woff2');
       }
-
+      /* mulish-600 - latin */
       @font-face {
-         font-display: swap;
-         font-family: 'Poppins';
-         font-style: normal;
-         font-weight: 400;
-         src: url('assets/fonts/poppins/poppins-v21-latin-regular.woff2') format('woff2'),
-            url('assets/fonts/poppins/poppins-v21-latin-regular.ttf') format('truetype');
+      font-display: swap; 
+      font-family: 'Mulish';
+      font-style: normal;
+      font-weight: 600;
+      src: url('assets/fonts/mulish-v13-latin-600.woff2') format('woff2'); 
+      }
+      /* mulish-700 - latin */
+      @font-face {
+      font-display: swap; 
+      font-family: 'Mulish';
+      font-style: normal;
+      font-weight: 700;
+      src: url('assets/fonts/mulish-v13-latin-700.woff2') format('woff2'); 
+      }
+      /* mulish-800 - latin */
+      @font-face {
+      font-display: swap;
+      font-family: 'Mulish';
+      font-style: normal;
+      font-weight: 800;
+      src: url('assets/fonts/mulish-v13-latin-800.woff2') format('woff2');
       }
    </style>
 
@@ -46,74 +63,17 @@
          <form action="#" class="search-form">
             <button type="submit" class="search-btn">
                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <path d="M7.333 12.667A5.333 5.333 0 1 0 7.333 2a5.333 5.333 0 0 0 0 10.667ZM14 14l-2.9-2.9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#64748B"></path>
+                  <path d="M7.333 12.667A5.333 5.333 0 1 0 7.333 2a5.333 5.333 0 0 0 0 10.667ZM14 14l-2.9-2.9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                </svg>
             </button>
-            <input type="search" placeholder="Search..." required="">
+            <input type="search" placeholder="Search here..." required="">
          </form>
-
          <nav>
             <ul>
                <li class="mega-menu-dropdown dropdown">
                   <a href="contact.html" class="active"> Link Building
                   </a>
               <div class="mega-dropdown">
-               <!-- <ul>
-                  <li class="h6">
-                     LATEST CATEGORY
-                  </li>
-                  <li>
-                     <a href="#">Top 10</a>
-                  </li>
-                  <li>
-                     <a href="#">HTML &amp; CSS</a>
-                  </li>
-                  <li>
-                     <a href="#">JavaScript</a>
-                  </li>
-               </ul>
-               <ul>
-                  <li class="h6">
-                     LATEST CATEGORY
-                  </li>
-                  <li>
-                     <a href="#">HTML &amp; CSS</a>
-                  </li>
-                  <li>
-                     <a href="#">JavaScript</a>
-                  </li>
-                  <li>
-                     <a href="#">PHP &amp; MySQL</a>
-                  </li>
-               </ul>
-               <ul>
-                  <li class="h6">
-                     LATEST CATEGORY
-                  </li>
-                  <li>
-                     <a href="#">HTML &amp; CSS</a>
-                  </li>
-                  <li>
-                     <a href="#">JavaScript</a>
-                  </li>
-                  <li>
-                     <a href="#">PHP &amp; MySQL</a>
-                  </li>
-               </ul>
-               <ul>
-                  <li class="h6">
-                     LATEST CATEGORY
-                  </li>
-                  <li>
-                     <a href="#">HTML &amp; CSS</a>
-                  </li>
-                  <li>
-                     <a href="#">JavaScript</a>
-                  </li>
-                  <li>
-                     <a href="#">PHP &amp; MySQL</a>
-                  </li>
-               </ul> -->
             <div class="row">
                <div class="col-lg-6">
                   <div class="h6">PR</div> 
@@ -411,7 +371,11 @@
          <div class="container">
             <div class="seperator">
                <div>How to</div>
-               <a href="#" class="sep-btn">view all</a>
+               <a href="#" class="sep-btn">view all
+                  <span>
+                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path d="M15.706 8.706a1 1 0 0 0 0-1.416l-4-4a1.001 1.001 0 0 0-1.416 1.416L12.584 7H1a1 1 0 1 0 0 2h11.584l-2.294 2.294a1.001 1.001 0 0 0 1.416 1.416l4-4z"/></svg>
+                  </span>
+               </a>
             </div>
 
             <div class="row row-gap h-100">
@@ -564,7 +528,11 @@
          <div class="container">
             <div class="seperator">
                <div>How to</div>
-               <a href="#" class="sep-btn">view all</a>
+               <a href="#" class="sep-btn">view all
+                  <span>
+                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path d="M15.706 8.706a1 1 0 0 0 0-1.416l-4-4a1.001 1.001 0 0 0-1.416 1.416L12.584 7H1a1 1 0 1 0 0 2h11.584l-2.294 2.294a1.001 1.001 0 0 0 1.416 1.416l4-4z"/></svg>
+                  </span>
+               </a>
             </div>
             <div class="row row-gap h-100">
                <div class="col-lg-3">
@@ -640,7 +608,11 @@
 
             <div class="seperator">
                <div>How to</div>
-               <a href="#" class="sep-btn">view all</a>
+               <a href="#" class="sep-btn">view all
+                  <span>
+                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path d="M15.706 8.706a1 1 0 0 0 0-1.416l-4-4a1.001 1.001 0 0 0-1.416 1.416L12.584 7H1a1 1 0 1 0 0 2h11.584l-2.294 2.294a1.001 1.001 0 0 0 1.416 1.416l4-4z"/></svg>
+                  </span>
+               </a>
             </div>
 
             <div class="row row-gap h-100">
@@ -756,7 +728,11 @@
 
             <div class="seperator">
                <div>How to</div>
-               <a href="#" class="sep-btn">view all</a>
+               <a href="#" class="sep-btn">view all
+                  <span>
+                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path d="M15.706 8.706a1 1 0 0 0 0-1.416l-4-4a1.001 1.001 0 0 0-1.416 1.416L12.584 7H1a1 1 0 1 0 0 2h11.584l-2.294 2.294a1.001 1.001 0 0 0 1.416 1.416l4-4z"/></svg>
+                  </span>
+               </a>
             </div>
 
             <div class="row row-gap h-100">
