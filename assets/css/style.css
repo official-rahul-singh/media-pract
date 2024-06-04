@@ -115,6 +115,10 @@ form input {
   background-color: #e9ebf34d;
   /* box-shadow: 3px 7px 19px 3px rgb(27 43 52 / 11%) inset; */
 }
+[class*="digiplan-container-bg"]{
+  padding:40px;
+  border-radius: 4px;
+}
 
 /* .digiplan-container-bg-1{
   background-image: url("../img/bg-01.png");
@@ -158,7 +162,7 @@ form input {
   background-color: #c7c7c7;
 }
 
-:is(.auth-name, .category-title):hover {
+:is(.auth-name a, .category-title):hover {
   text-decoration: underline;
 }
 
@@ -359,9 +363,9 @@ header ul li ul a {
   border-bottom: none;
 } */
 
-.home-page .number .site-content:before {
+/* .home-page .number .site-content:before {
   background-color: #22a1ff1a;
-}
+} */
 
 .home-page .number .site-content:not(:last-child) {
   border-bottom: 1px solid rgba(217, 217, 217, 0.3);
@@ -718,9 +722,6 @@ footer .h6 {
 }
 }
 
-.date{
-  color: var(--color);
-}
 
 .digiplan-container-black{
   background-color: var(--color);
@@ -761,7 +762,7 @@ position: relative;
   width: 100%;
 }
 .overlay-card .img-placeholder ::before{
-  background: linear-gradient(180deg, #00000014 0, rgb(0 0 0 / 0%) 27%, rgb(0 0 0 / 49%) 90%);
+  background: linear-gradient(180deg, #00000014 0, rgb(0 0 0 / 0%) 27%, rgb(0 0 0 / 64%) 90%);
   content: " ";
   height: 100%;
   left: 0;
@@ -770,3 +771,5 @@ position: relative;
   width: 100%;
   z-index: 1;
 }
+
+

@@ -301,9 +301,14 @@ blockquote,
 }
 
 .site-content {
-  display: grid;
-  gap: 10px;
+  /* display: grid;
+  gap: 10px; */
+  display: flex;
+  flex-flow: column;
+  gap: 12px;
+  flex: 1;
 }
+
 
 .site-card :is(.site-title, p) {
   display: -webkit-box !important;
@@ -313,6 +318,11 @@ blockquote,
   -webkit-box-orient: vertical;
   margin-bottom: 0 !important;
 }
+
+.site-card{
+  gap:20px;
+}
+
 .site-card-bg{
     padding: 16px;
     border: 1px solid #fbfbfb;
@@ -353,8 +363,15 @@ blockquote,
 .date {
   width: fit-content;
   display: flex;
-  opacity: 0.7;
   font-size: 14px;
+  color:#8a8a8a;
+}
+
+.auth-name {
+  gap:5px;
+}
+.auth-name a{
+  font-weight: 600;
 }
 
 .date{
@@ -734,6 +751,9 @@ header .search-bar-show {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: 700;
+  font-size: 25px;
+  color: #ccc;
 }
 
 
