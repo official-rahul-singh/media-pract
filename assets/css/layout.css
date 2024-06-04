@@ -321,6 +321,9 @@ blockquote,
 
 .site-card{
   gap:20px;
+  display: flex;
+  flex-flow: column;
+  /* height: 100%; */
 }
 
 .site-card-bg{
@@ -459,7 +462,7 @@ blockquote,
   border-bottom: 1px solid #e3e3e3;
 }
 
-.digiplan-container-4 .border-bottom:last-child,[class*="digiplan-container"] [class*="col"]:last-of-type .border-bottom {
+.digiplan-container-4 .border-bottom:last-of-type, .border-list [class*="col"]:last-of-type .border-bottom {
   padding-bottom: 0 !important;
   border: unset;
 }
