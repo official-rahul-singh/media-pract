@@ -459,7 +459,7 @@ blockquote,
   border-bottom: 1px solid #e3e3e3;
 }
 
-.border-bottom:last-child {
+.digiplan-container-4 .border-bottom:last-child,[class*="digiplan-container"] [class*="col"]:last-of-type .border-bottom {
   padding-bottom: 0 !important;
   border: unset;
 }
@@ -1863,4 +1863,10 @@ footer .footer-category ul {
     gap: 0px !important;
   }
 
+}
+
+@media (min-width: 1400px) {
+  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 1320px;
+  }
 }
