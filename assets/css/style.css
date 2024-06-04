@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   /* font-family: "Poppins", sans-serif; */
-  font-family: "Mulish", sans-serif;
+  font-family: 'Public Sans';
 }
 
 :root {
@@ -14,33 +14,10 @@
 
   --hover: rgba(19, 204, 98, 1);
   --hover-1:rgba(1, 125, 171, 1);
-  /* --gradient: linear-gradient(212deg,
-      rgba(19, 204, 98, 1) 5%,
-      rgba(1, 125, 171, 1) 94%); */
   --gradient: #22a1ff;
 
   scroll-behavior: smooth;
 }
-
-/* .darkmode {
-  --primary-color: #002737;
-  --secondary-color: #00212e;
-  --color: #fff;
-} */
-
-/* .darkmode #dp-logo img,.darkmode .logo-second{
-  filter:brightness(0) invert(1);
-} */
-
-/* .darkmode .seperator::before,
-.darkmode .mail svg path,
-.darkmode .site-social-links svg path,
-.darkmode .toggle-slide-btn svg,
-.darkmode .contact-mail svg,
-.darkmode .log-in,
-.darkmode .auth-btn svg {
-  filter: invert(0) !important;
-} */
 
 
 .dropdown::after,
@@ -136,15 +113,15 @@ form input {
 [class*="digiplan-container-bg"],
 .bg-color-card {
   background-color: #e9ebf34d;
-  box-shadow: 3px 7px 19px 3px rgb(27 43 52 / 11%) inset;
+  /* box-shadow: 3px 7px 19px 3px rgb(27 43 52 / 11%) inset; */
 }
 
-.digiplan-container-bg-1{
+/* .digiplan-container-bg-1{
   background-image: url("../img/bg-01.png");
   background-size: cover;
   background-repeat: no-repeat;
   box-shadow: unset;
-}
+} */
 
 :is(h1,h2, h3, h4, h5, h6, .h2, .h3, .h4, .h5, .h6,.site-title,.big-head,.subhead,h2>strong)
  {
@@ -185,6 +162,10 @@ form input {
   text-decoration: underline;
 }
 
+.category-title{
+  color: var(--gradient);
+  font-weight: 600;
+}
 
 /* # Common Components
 =================================================*/
@@ -198,7 +179,8 @@ form input {
 .seperator div {
   font-size: 40px;
   font-weight: 700;
-  /* font-family: var(--font-gilory); */
+  border-bottom: 10px solid #22a1ff78;
+  line-height: 20px;
 }
 
 .seperator::before {
@@ -206,9 +188,9 @@ form input {
   filter: invert(1) !important;
 }
 
-.seperator::after {
+/* .seperator::after {
   background: var(--gradient);
-}
+} */
 
 /*Sep button_____________Start*/
 .sep-btn {
@@ -216,6 +198,8 @@ form input {
  /* border: 1px solid var(--gradient);
   color:var(--gradient); */
   color: var(--gradient);
+  font-weight: 700;
+  text-decoration: underline;
 }
 .sep-btn svg{
   border: 1px solid var(--gradient);
@@ -223,10 +207,11 @@ form input {
   width: 30px;
   display: inline-block;
   border-radius: 50%;
-  padding: 9px;
+  padding: 8px;
   fill: var(--gradient);
   margin-left: 10px;
   transition: all 0.2s;
+  transform: rotate(322deg);
 }
 
 .sep-btn:hover svg{
@@ -733,3 +718,47 @@ footer .h6 {
 }
 }
 
+.digiplan-container-black{
+  background-color: var(--color);
+}
+
+.digiplan-container-black > * {
+  --color: var(--primary-color);
+}
+
+.digiplan-container-black .seperator div{
+  color: var(--primary-color);
+}
+
+.overlay-card {
+position: relative;
+}
+.overlay-card .site-content{
+  position: absolute;
+  bottom: 16px;
+  padding: 30px;
+  z-index: 1;
+  background-color: var(--primary-color);
+  margin:10px 20px;
+  border-radius: 4px;
+}
+
+.overlay-card .site-content :is(.big-head,.auth-name){
+  color: #000;
+}
+.overlay-card .img-placeholder img{
+  height: 584px;
+  object-fit: cover;
+  transition: all .8s ease-in-out;
+  width: 100%;
+}
+.overlay-card .img-placeholder ::after{
+  background: linear-gradient(180deg, #00000014 0, rgb(0 0 0 / 0%) 27%, rgb(0 0 0 / 49%) 90%);
+  content: " ";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}

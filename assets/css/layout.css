@@ -215,7 +215,7 @@ body {
   margin-block: 40px;
 }
 
-[class*="digiplan-container-bg"] {
+[class*="digiplan-container-bg"], .digiplan-container-black {
   padding: 40px 0;
   margin-block: 0px;
 }
@@ -322,7 +322,7 @@ blockquote,
 
 .site-title {
   font-size: 18px;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 28px;
   display: block;
 }
@@ -335,7 +335,7 @@ blockquote,
 .big-head {
   font-size: 32px;
   line-height: 46px;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .subhead {
@@ -357,12 +357,20 @@ blockquote,
   font-size: 14px;
 }
 
-
+.date{
+  position: relative;
+}
+.date::before{
+  content: "-";
+  display: inline-block;
+  padding-inline: 8px;
+}
 
 /*Separator_____________Start*/
 .seperator {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   position: relative;
   margin-bottom: 45px;
   gap: 10px;
@@ -374,16 +382,16 @@ blockquote,
   height: 25px;
 } */
 
-.seperator::after {
+/* .seperator::after {
   content: "";
   height: 1px;
   flex: 1;
   bottom: 8px;
-}
+} */
 
-.seperator .sep-btn {
+/* .seperator .sep-btn {
   order: 2;
-}
+} */
 
 /*Sep button_____________Start*/
 .sep-btn {
@@ -707,7 +715,7 @@ header .search-bar-show {
 
 .home-page .number .site-content {
   position: relative;
-  padding: 15px 0px 15px 50px;
+  padding: 0px 0px 15px 50px;
 }
 
 .number .site-content:last-child {
@@ -719,7 +727,7 @@ header .search-bar-show {
   counter-increment: term;
   position: absolute;
   left: 0;
-  top: 15px;
+  top: 0px;
   border-radius: 50%;
   width: 35px;
   height: 35px;
