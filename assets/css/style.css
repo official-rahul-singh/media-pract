@@ -718,11 +718,15 @@ footer .h6 {
 }
 }
 
+.date{
+  color: var(--color);
+}
+
 .digiplan-container-black{
   background-color: var(--color);
 }
 
-.digiplan-container-black > * {
+.digiplan-container-black > *{
   --color: var(--primary-color);
 }
 
@@ -735,24 +739,28 @@ position: relative;
 }
 .overlay-card .site-content{
   position: absolute;
-  bottom: 16px;
+  bottom:0px;
   padding: 30px;
   z-index: 1;
-  background-color: var(--primary-color);
-  margin:10px 20px;
   border-radius: 4px;
 }
 
-.overlay-card .site-content :is(.big-head,.auth-name){
-  color: #000;
+.overlay-title{
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1.5;
 }
+.overlay-title:hover{
+  text-decoration: underline;
+}
+
 .overlay-card .img-placeholder img{
-  height: 584px;
+  height: 530px;
   object-fit: cover;
   transition: all .8s ease-in-out;
   width: 100%;
 }
-.overlay-card .img-placeholder ::after{
+.overlay-card .img-placeholder ::before{
   background: linear-gradient(180deg, #00000014 0, rgb(0 0 0 / 0%) 27%, rgb(0 0 0 / 49%) 90%);
   content: " ";
   height: 100%;
