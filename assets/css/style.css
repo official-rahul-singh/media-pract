@@ -270,9 +270,9 @@ header ul li ul a {
   background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m4 5.588 4 4 4-4' stroke='%23000' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }
 
-.search-form{
+/* .search-form{
   background-color: var(--secondary-color);
-}
+} */
 
 .search-form input {
   font-size: 14px;

@@ -333,7 +333,7 @@ margin-top: auto;
 
 .site-title {
   font-size: 17px;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 28px;
   display: block;
 }
@@ -346,7 +346,7 @@ margin-top: auto;
 .big-head {
   font-size: clamp(1.0625rem, 0.3929rem + 1.7857vw, 2rem);
   line-height: clamp(1.75rem, 0.9464rem + 2.1429vw, 2.875rem);
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .subhead {
@@ -487,11 +487,7 @@ header>.container {
   user-select: none;
 }
 
-/* .logo-first {
-  display: none;
-} */
-
-#dp-logo, .logo-second{
+#dp-logo img, .logo-second{
   width: 290px;
 }
 
@@ -596,7 +592,7 @@ header .mob-search-btn {
     align-items: center;
     padding: 6px 14px;
     border-radius: 40px;
-    border: 1px solid #cccccc70;
+    border: 1px solid #32323270;
 }
 
 .search-form input {
