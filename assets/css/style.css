@@ -109,7 +109,7 @@ p {
   background-color: #e9ebf34d;
 }
 [class*="digiplan-container-bg"]{
-  padding:40px;
+  padding:clamp(0.9375rem, 0.3365rem + 2.4038vw, 2.5rem);
   border-radius: 4px;
 }
 
