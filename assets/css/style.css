@@ -188,21 +188,14 @@ form input {
 }
 
 .seperator::before {
-  /* background: url('data:image/svg+xml,<svg width="23" height="29" viewBox="0 0 23 29" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.047 0v3.868h-3.869V0h3.869Zm-7.24 5.725v6.19H.618v-6.19h6.19ZM10.6 19.061v9.79H0v-10.6h9.94l4.565-4.734V6.483h7.813v7.813h-7.123L10.6 19.061Z" fill="%23fff"/></svg>') no-repeat; */
   filter: invert(1) !important;
 }
 
-/* .seperator::after {
-  background: var(--gradient);
-} */
 
 /*Sep button_____________Start*/
 .sep-btn {
- /* background: var(--gradient); */
- /* border: 1px solid var(--gradient);
-  color:var(--gradient); */
   color: var(--gradient);
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: underline;
 }
 .sep-btn svg{

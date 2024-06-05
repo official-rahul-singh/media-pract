@@ -319,11 +319,15 @@ blockquote,
   margin-bottom: 0 !important;
 }
 
+.post-meta{
+margin-top: auto;
+}
+
 .site-card{
-  gap:20px;
   display: flex;
   flex-flow: column;
-  /* height: 100%; */
+  gap: 20px;
+  height: 100%;
 }
 
 .site-card-bg{
@@ -462,13 +466,12 @@ blockquote,
   border-bottom: 1px solid #e3e3e3;
 }
 
-.digiplan-container-4 .border-bottom:last-of-type, .border-list [class*="col"]:last-of-type .border-bottom {
+.digiplan-container-4 .row [class*="col"] .row [class*="col"]:last-of-type .border-bottom{
   padding-bottom: 0 !important;
   border: unset;
 }
 
 /* pagination_____________start */
-
 .pagination {
   margin-top: 50px;
 }
@@ -665,9 +668,7 @@ border: 1px solid black;
   cursor: pointer;
 }
 
-
 header .search-bar-show {
-  /* display: flex; */
   transition: all 0.3s ease;
   z-index: 10;
   transform: scaleY(1);
@@ -779,18 +780,6 @@ header .search-bar-show {
   rotate: 180deg;
 }
 
-.digiplan-container-3 .border-bottom,
-.digiplan-container-4 .border-bottom {
-  padding: 25px 0;
-}
-
-:is(.digiplan-container-3, .digiplan-container-4) .border-bottom:first-child {
-  padding-top: 0 !important;
-}
-
-:is(.digiplan-container-3, .digiplan-container-4) .border-bottom:last-child {
-  padding-bottom: 0 !important;
-}
 
 /* # Single Page
 =================================================*/
@@ -994,7 +983,6 @@ blockquote::before {
   font-size: 18px;
   font-weight: 700;
   display: flex;
-  /* align-items: center; */
   gap: 10px;
 }
 
