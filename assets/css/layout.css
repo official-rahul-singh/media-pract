@@ -91,8 +91,8 @@ svg {
 
 form input {
   width: 100%;
-  /* padding: 22px; */
-  border-radius: 4px;
+  outline: none;
+  border: unset;
 }
 
 input,
@@ -218,12 +218,6 @@ body {
 [class*="digiplan-container-bg"], .digiplan-container-black {
   padding: 40px 0;
   margin-block: 0px;
-}
-
-.left-part {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
 }
 
 .row-gap {
@@ -400,58 +394,10 @@ margin-top: auto;
   gap: 10px;
 }
 
-/* .seperator::before {
-  content: "";
-  width: 25px;
-  height: 25px;
-} */
-
-/* .seperator::after {
-  content: "";
-  height: 1px;
-  flex: 1;
-  bottom: 8px;
-} */
-
-/* .seperator .sep-btn {
-  order: 2;
-} */
-
 /*Sep button_____________Start*/
 .sep-btn {
-  /* padding: 10px 25px;
-  border-radius: 50px; */
   display: inline-block;
   text-transform: capitalize;
-}
-
-/* Social Icons _____________Start*/
-.site-social-links {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.site-social-links ul {
-  padding-left: 0px;
-  flex-wrap: wrap;
-}
-
-.cate footer ul,
-.site-social-links ul {
-  display: flex;
-  align-items: center;
-  list-style-type: none;
-  gap: 10px;
-}
-
-.site-social-links ul li a {
-  border-radius: 50%;
-  width: 32px;
-  height: 32px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 
@@ -1220,44 +1166,6 @@ textarea {
 
 /* # Footer
 =================================================*/
-footer {
-  margin-top: 40px;
-  padding-top: 30px;
-  position: relative;
-  z-index: 0;
-}
-
-footer>.container,
-.footer-category {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-
-footer::before {
-  position: absolute;
-  content: "";
-  height: 100%;
-  width: 100%;
-  opacity: 0.1;
-  z-index: -1;
-  top: 0;
-  left: 0;
-}
-
-footer .h6 {
-  padding-bottom: 8px;
-  width: fit-content;
-}
-
-footer ul {
-  list-style-type: none;
-}
-
-footer .footer-category ul {
-  gap: 10px !important;
-}
 
 .logos-link a img {
   filter: brightness(0.5);
@@ -1269,10 +1177,6 @@ footer .footer-category ul {
   transition: all 0.5s;
 }
 
-.footer-category ul li a:hover {
-  text-decoration: underline;
-}
-
 
 .logos-link div {
   margin-bottom: 8px;
@@ -1280,11 +1184,6 @@ footer .footer-category ul {
 
 .mail span {
   margin: 0px 5px;
-}
-
-.copyright {
-  padding: 10px;
-  text-align: center;
 }
 
 /* # Scroll top button
@@ -1742,20 +1641,8 @@ footer .footer-category ul {
     margin-bottom: 25px;
   }
 
-  .row-gap {
-    row-gap: 20px !important;
-  }
-
   .widget-content {
     padding: 20px !important;
-  }
-
-  .left-part {
-    gap: 15px;
-  }
-
-  [class*="grid"] {
-    grid-template-columns: auto !important;
   }
 
   .table-responsive {
