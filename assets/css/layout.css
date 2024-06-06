@@ -212,12 +212,11 @@ body {
 }
 
 [class*="digiplan-container"] {
-  margin-block: 40px;
+  margin-block: clamp(1.5625rem, 0.8929rem + 1.7857vw, 2.5rem);
 }
 
-[class*="digiplan-container-bg"], .digiplan-container-black {
-  padding: 40px 0;
-  margin-block: 0px;
+ .digiplan-container-black {
+  padding-block: 40px;
 }
 
 .row-gap {
@@ -304,7 +303,7 @@ blockquote,
 }
 
 
-.site-card :is(.site-title, p) {
+.site-content :is(.site-title, p, .big-head,.overlay-title) {
   display: -webkit-box !important;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -1576,11 +1575,6 @@ textarea {
 
   .search-form .search-btn {
     right: -20px;
-  }
-
-
-  [class*="digiplan-container-bg"] {
-    padding: 25px 0;
   }
 
   .ui-switch {

@@ -335,14 +335,14 @@ position: relative;
 }
 .overlay-card .site-content{
   position: absolute;
-  bottom:0px;
-  padding: 30px;
+  bottom:30px;
+  padding-inline: clamp(1.25rem, 0.8036rem + 1.1905vw, 1.875rem);
   z-index: 1;
   border-radius: 4px;
 }
 
 .overlay-title{
-  font-size: 25px;
+  font-size: clamp(1.125rem, 0.8125rem + 0.8333vw, 1.5625rem);
   font-weight: 700;
   line-height: 1.5;
 }
@@ -596,114 +596,6 @@ textarea::placeholder {
   background: var(--gradient);
 }
 
-/* # Responsive Code
-=================================================*/
-@media screen and (max-width: 1023px) {
-  header nav ul {
-    background-color: #fff;
-  }
-  .search-form input
-  header ul li a {
-    color: #000;
-  }
-  .search-form{
-    position: absolute;
-    top: 64px;
-    left: 0px;
-    height: 50px;
-    width: 100%;
-    background-color: var(--gradient);
-    border-radius: 0;
-    transform: scale(0);
-    transform-origin: top;
-  }
-  .mob-search-btn{
-    display: block;
-  }
-  .search-form input{   
-    color: var(--primary-color);
-    width: 100%;
-  }
-  .search-form input::placeholder {
-    color: var(--primary-color);
-  }
-  .search-btn svg{
-    stroke:var(--primary-color);
-  }
-
-  .site-card{
-    display: grid;
-  }
-}
-
-@media screen and (max-width: 600px) {
-
-  .seperator div {
-    font-size: 25px;
-  }
-
-  .subhead,
-  .number .h5 {
-    font-size: 18px !important;
-    line-height: 30px !important;
-  }
-
-  .error-title {
-    font-size: 40px;
-  }
-
-  .error-page {
-    background: unset;
-  }
-
-  .search-form input {
-    font-size: 15px !important;
-  }
-
-  .overlay-card .img-placeholder img{
-    height: 350px;
-  }
-}
-
-/* mega menu */
-.mega-menu-dropdown{
-  position: static;
-}
-
-/* main */
-.mega-dropdown ul{
-  flex-direction: column;
-  width: 100%;
-  align-items: flex-start;
-  gap:20px;
-}
-
-/* second menu */
-.mega-menu a {
-  width: 50%;
-  float: left;
-}
-
-.list-group{
-  display: flex;
-  flex-direction: column;
-}
-.mega-dropdown .row{
-  row-gap: 16px;
-}
-
-.mega-dropdown a,.h6 {
-    padding: 10px 15px;
-}
-
-@media screen and (max-width: 1023px) {
-  .mega-menu a {
-    width: 100%;
-}
-.mega-menu-dropdown{
-  position: relative;
-}
-}
 
 
 /* footer start */
@@ -824,4 +716,125 @@ footer p{
 .btn:hover{
   background-color:transparent;
   border-color: gray;
+}
+
+
+
+
+/* # Responsive Code
+=================================================*/
+@media screen and (max-width: 1023px) {
+  header nav ul {
+    background-color: #fff;
+  }
+  .search-form input
+  header ul li a {
+    color: #000;
+  }
+  .search-form{
+    position: absolute;
+    top: 64px;
+    left: 0px;
+    height: 50px;
+    width: 100%;
+    background-color: var(--gradient);
+    border-radius: 0;
+    transform: scale(0);
+    transform-origin: top;
+    border: unset;
+  }
+  .mob-search-btn{
+    display: block;
+  }
+  .search-form input{   
+    color: var(--primary-color);
+    width: 100%;
+  }
+  .search-form input::placeholder {
+    color: var(--primary-color);
+  }
+  .search-btn svg{
+    stroke:var(--primary-color);
+  }
+
+  .site-card{
+    display: grid;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .seperator div {
+    font-size: 25px;
+  }
+
+  .subhead,
+  .number .h5 {
+    font-size: 18px !important;
+    line-height: 30px !important;
+  }
+
+  .error-title {
+    font-size: 40px;
+  }
+
+  .error-page {
+    background: unset;
+  }
+
+  .search-form input {
+    font-size: 15px !important;
+  }
+
+  .overlay-card .img-placeholder img{
+    height: 350px;
+  }
+
+  .grid-md-30 {
+    grid-template-columns:auto;
+}
+
+[class*="digiplan-container-bg"],.digiplan-container-black {
+  padding-block: 25px;
+}
+}
+
+/* mega menu */
+.mega-menu-dropdown{
+  position: static;
+}
+
+/* main */
+.mega-dropdown ul{
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+  gap:20px;
+}
+
+/* second menu */
+.mega-menu a {
+  width: 50%;
+  float: left;
+}
+
+.list-group{
+  display: flex;
+  flex-direction: column;
+}
+.mega-dropdown .row{
+  row-gap: 16px;
+}
+
+.mega-dropdown a,.h6 {
+    padding: 10px 15px;
+}
+
+@media screen and (max-width: 1023px) {
+  .mega-menu a {
+    width: 100%;
+}
+.mega-menu-dropdown{
+  position: relative;
+}
 }
