@@ -44,7 +44,7 @@ h2,
 .h2,
 h1,
 .h1 {
-  font-weight: 700 !important;
+  font-weight: 800 !important;
   line-height: 1.5;
   text-transform: capitalize;
 }
@@ -212,7 +212,11 @@ body {
 }
 
 [class*="digiplan-container"] {
-  margin-block: clamp(1.5625rem, 0.8929rem + 1.7857vw, 2.5rem);
+  margin-block: clamp(1.5625rem, 0.4464rem + 2.9762vw, 3.125rem);
+}
+
+.digiplan-container-1{
+  margin-top: 30px;
 }
 
  .digiplan-container-black {
@@ -243,32 +247,6 @@ body {
 
 .grid-50-50 {
   grid-template-columns: repeat(2, 1fr);
-}
-
-/* all widgets remove margin-bottom from last child */
-:is(.author-content, .accordion-content, .page-content, .widget-content, .digital-pc-body, blockquote, .toc-body, ul, ol)>*:last-child {
-  margin-bottom: 0 !important;
-}
-
-blockquote,
-.digiplan-widget-pc-container,
-.digiplan-widget,
-.accordions,
-.table-responsive {
-  margin-bottom: 30px;
-}
-
-.page-header {
-  margin-bottom: 50px;
-  gap: 15px !important;
-}
-
-.page-header p {
-  margin-bottom: 0 !important;
-}
-
-.category-page {
-  gap: 40px;
 }
 
 
@@ -389,7 +367,7 @@ margin-top: auto;
   align-items: center;
   justify-content: space-between;
   position: relative;
-  margin-bottom: 45px;
+  margin-bottom: 30px;
   gap: 10px;
 }
 
@@ -668,19 +646,18 @@ header .search-bar-show {
   top: 5px;
 }
 
-.home-page .number {
+/* .home-page .number {
   position: sticky;
   top: 85px;
   border-radius: 8px;
-  /* padding: 20px 30px 30px 20px; */
-}
+} */
 
-.home-page .number .site-content {
+/* .home-page .number .site-content {
   position: relative;
   padding: 0px 0px 15px 50px;
-}
+} */
 
-.number .site-content:last-child {
+/* .number .site-content:last-child {
   padding-bottom: 0px;
 }
 
@@ -699,7 +676,7 @@ header .search-bar-show {
   font-weight: 700;
   font-size: 25px;
   color: #ccc;
-}
+} */
 
 
 .number .h5 {
@@ -989,174 +966,8 @@ blockquote::before {
 }
 
 
-/* # All Author Page
-=================================================*/
-
-.all-author-page {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  flex-wrap: wrap;
-}
-
-.all-author-page .author-container {
-  background-color: transparent;
-  border-radius: unset;
-  transition: all 0.5s ease;
-  overflow: hidden;
-}
-
-.all-author-page .author-container .author-content {
-  transform: translateY(15px);
-  transition: all 0.5s ease;
-}
-
-.all-author-page .author-container p {
-  margin-bottom: 0 !important;
-}
-
-.all-author-page .author-container .author-img img {
-  transform: scale(1.2) !important;
-  transition: all 0.5s ease;
-}
-
-.auth-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  transition: all 0.5s ease;
-  transform: translateY(100px);
-}
-
-.auth-btn:hover {
-  text-decoration: underline;
-}
-
-.all-author-page .author-container:hover .auth-btn {
-  transition: all 0.5s ease;
-  transform: translateY(15px);
-}
-
-.all-author-page .author-container:hover .author-img img {
-  transform: scale(1) !important;
-  transition: all 0.5s ease;
-}
-
-.all-author-page .author-container:hover .author-content {
-  transform: translateY(-10px);
-  transition: all 0.5s ease;
-}
-
-/* # Author Single Page 
-=================================================*/
-.author-container {
-  padding: 20px;
-  border-radius: 8px;
-}
-
-.author-img img {
-  border-radius: 50%;
-}
-
-.author-page .page-content {
-  margin-bottom: 50px;
-}
-
-.author-container .author-img img {
-  border: unset;
-}
-
-.author-content .h5 {
-  margin-bottom: 0 !important;
-}
-
-.author-content .h5:hover {
-  text-decoration: underline;
-}
-
 /* # Contact Page Templates
 =================================================*/
-.contact-page p {
-  margin-bottom: 0 !important;
-}
-
-.contact-page form {
-  padding: 30px;
-  border-radius: 8px;
-}
-
-.contact-info-box {
-  display: flex;
-  gap: 15px;
-  margin: 0 auto;
-  flex-wrap: wrap;
-  text-align: center;
-}
-
-.contact-mail,
-.contact-page .site-social-links {
-  padding: 10px 50px;
-  flex: 1;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.contact-page input,
-textarea {
-  padding: 15px;
-  border: unset;
-  margin: 15px 0px;
-  width: 100%;
-}
-
-/* # Thank You || Search Not Found  || 404 Page
-=================================================*/
-.error-page {
-  width: 100%;
-  height: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-}
-
-.error-page :is(h2, h3, h4, h5, h6, .h2, .h3, .h4, .h5, .h6) {
-  margin-bottom: 0 !important;
-}
-
-.page-404 .error-page {
-  flex-direction: row;
-  height: 400px;
-}
-
-
-.page-404-content {
-  text-align: center;
-  gap: 10px;
-}
-
-.page-404-content .error-title {
-  margin-top: -45px;
-  position: relative;
-}
-
-:is(.error-page, .contact-page) .sep-btn {
-  margin: 0 auto;
-  display: flex;
-  width: fit-content;
-}
-
-.robox-img img {
-  position: absolute;
-  left: -260px;
-  transform: translateY(-100px);
-}
-
-
 
 
 /* # Footer
@@ -1316,10 +1127,11 @@ textarea {
     flex: 0 0 auto;
     width: 100%;
   }
-
-  .all-author-page .author-container {
-    width: 25%;
+  .col-lg-10 {
+    flex: 0 0 auto;
+    width: 83.33333333%;
   }
+
 }
 
 @media (min-width: 1200px) {
@@ -1444,7 +1256,7 @@ textarea {
   }
 
   [class*="digiplan-container"] {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
 
   .seperator {
@@ -1454,10 +1266,6 @@ textarea {
   .seperator::after {
     content: unset !important;
     position: unset !important;
-  }
-
-  .sep-btn {
-    margin-left: auto;
   }
 
   .blog-header>.co-aut {
@@ -1518,6 +1326,7 @@ textarea {
     display: none;
   }
 
+
 }
 
 @media screen and (max-width: 600px) {
@@ -1544,29 +1353,10 @@ textarea {
     overflow-x: auto;
   }
 
-  .contact-page form {
-    padding: 15px;
-  }
-
-  .author-container {
-    padding: 20px;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-  }
-
   .author-page .h6:first-child {
     margin: 10px 0px;
     display: block;
     text-align: center;
-  }
-
-  .home-page .number {
-    padding-top: 15px;
-  }
-
-  .home-page .number .big-category {
-    margin: 0 auto;
   }
 
   .big-category {
@@ -1618,10 +1408,10 @@ textarea {
     display: none !important;
   }
 
-  .error-page {
+  /* .error-page {
     padding-top: 20px;
     height: auto !important;
-  }
+  } */
 
   .page-404-content .error-title {
     margin: 0 !important;
