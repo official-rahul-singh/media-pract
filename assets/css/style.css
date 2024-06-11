@@ -1229,12 +1229,6 @@ header ul .dropdown ul .dropdown ul {
   .mega-menu-dropdown {
       position: relative;
   }
-  /* #icon-position {
-    cursor: pointer;
-    margin-right: 50px;
-    opacity: 1;
-    visibility: visible;
-} */
 }
 
 
@@ -1245,7 +1239,7 @@ header ul .dropdown ul .dropdown ul {
 .sidebar-menu-class ul li.t-active{
 position: relative;
 }
-li.t-active ::before{
+li.t-active ::before,.sidebar-menu-class ul li:hover ::before{
   content: "";
   width: 0;
   height: 0;
