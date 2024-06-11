@@ -98,76 +98,62 @@ document.addEventListener("DOMContentLoaded", function () {
     mybutton.addEventListener("click", topFunction);
 
 
+   /* TOC - Table of Content
+    ...............................................................*/
+    const sidebarClass = document.querySelector('.table-list');
+    const toggleTOCIcon = document.querySelector('#icon-position');
+    const sidebarContent = document.querySelector('.sidebar-main');
 
-
-    // Table Of Content   ============ start =====>
-    const tableHeader = document.querySelector(".toc-header");
-    const tableCrossBtn = document.querySelector(".arrow");
-    const tableOfcontentBody = document.querySelector(".tableofcontent .toc-body");
-    // Function to check if it's a mobile device
-    function isMobileDevice() {
-        return window.innerWidth <= 768; // Adjust the width as needed
-    }
-    // Function to hide table of content on mobile devices
-    function hideTableOfContentOnMobile() {
-        if (isMobileDevice()) {
-            tableOfcontentBody.classList.add("hidden");
-        }
-    }
-    // Initial check to hide on page load if it's a mobile device
-    if (tableHeader) {
-        hideTableOfContentOnMobile();
-        tableHeader.addEventListener("click", function () {
-            if (tableOfcontentBody.classList.contains("hidden")) {
-                tableOfcontentBody.classList.remove("hidden");
-                tableCrossBtn.style.transform = "rotate(0deg)";
-            } else {
-                tableOfcontentBody.classList.add("hidden");
-                tableCrossBtn.style.transform = "rotate(270deg)";
-            }
+    if ( sidebarClass ) {
+      toggleTOCIcon.addEventListener('click', function () {
+        sidebarClass.classList.toggle('open');
+        sidebarContent.style.marginBottom = '0px';
+      });
+    
+      const tocLinks = document.querySelectorAll(".table-list a");
+      if (tocLinks.length) {
+        tocLinks.forEach(function(tocLink) {
+          tocLink.addEventListener("click", smoothScroll);
         });
-    }
-    // Check on window resize to adjust visibility
-    window.addEventListener("resize", hideTableOfContentOnMobile);
-
-    const tableOfContentItems = document.querySelectorAll(".tableofcontent ul li a");
-    tableOfContentItems.forEach((link) => {
-        link.addEventListener("click", scrollToSection);
-    });
-
-    function scrollToSection(event) {
-        event.preventDefault();
-        const targetId = this.getAttribute("href").substring(1);
-        const targetElement = document.getElementById(targetId);
-        if (targetElement) {
-            const offset = targetElement.offsetTop - 100;
-            const top = offset > 0 ? offset : 0;
-            window.scrollTo({
-                top: top,
-                behavior: "smooth",
-            });
+    
+        function smoothScroll(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute("href").substring(1);
+          const targetElement = document.getElementById(targetId);
+          if (targetElement) {
+            const offset = targetElement.offsetTop - 100; // Top offset with approximately 120 pixels difference from the top
+            const scrollToPosition = offset > 0 ? offset : 0; // Ensure positive scroll position
+            window.scrollTo({ top: scrollToPosition, behavior: 'smooth' });
+          }
         }
-    }
-    const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry) => {
-                const targetId = entry.target.getAttribute("id");
-                const link = document.querySelector(`.tableofcontent ul li a[href="#${targetId}"]`);
-                if (entry.isIntersecting) {
-                    link?.parentElement.classList.add("active");
-                } else {
-                    link?.parentElement.classList.remove("active");
-                }
-            });
-        },
-        {
-            threshold: 0.5,
-        }
-    );
-    document.querySelectorAll("h2, h3, h4, h5, h6").forEach((element) => {
-        observer.observe(element);
-    });
+      }
+    
+	const observer = new IntersectionObserver(entries => {
+	  entries.forEach(entry => {
+		const id = entry.target.getAttribute('id');
 
+		if (id !== null) {
+		  if (entry.intersectionRatio > 0) {
+			const anchor = document.querySelector('.table-list li a[href="#' + id + '"]');
+			if (anchor) {
+			  anchor.parentElement.classList.add('t-active');
+			}
+		  } else {
+			const anchor = document.querySelector('.table-list li a[href="#' + id + '"]');
+			if (anchor) {
+			  anchor.parentElement.classList.remove('t-active');
+			}
+		  }
+		}
+	  });
+	});
+
+	// Track all sections and headings, even if they don't have an `id`
+	document.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(function (section) {
+	  observer.observe(section);
+	});
+
+    }
 
 
 
