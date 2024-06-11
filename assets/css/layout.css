@@ -627,6 +627,14 @@ header .search-bar-show {
   padding-left: 0px !important;
 }
 
+.sidebar-menu-class ul.table-list ul{
+  padding-left: 0px !important;
+  margin-bottom: 0;
+}
+.sidebar-menu-class ul.table-list ul li{
+  padding-left: 36px;
+}
+
 .sidebar-menu-class ul.table-list li::before{
   display: none;
 }
