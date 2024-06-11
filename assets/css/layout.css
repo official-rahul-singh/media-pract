@@ -261,6 +261,9 @@ body {
 .img-placeholder,
 .img-placeholder img {
   border-radius: 8px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .site-content {
