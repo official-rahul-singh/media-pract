@@ -261,9 +261,6 @@ body {
 .img-placeholder,
 .img-placeholder img {
   border-radius: 8px;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
 }
 
 .site-content {
@@ -561,6 +558,7 @@ header .search-bar-show {
 /* overlay card start */
 .overlay-card {
   position: relative;
+  height: 100%;
 }
 .overlay-card .site-content {
   position: absolute;
@@ -568,9 +566,13 @@ header .search-bar-show {
   padding-inline: clamp(1.25rem, 0.8036rem + 1.1905vw, 1.875rem);
   z-index: 1;
 }
+.overlay-card .img-placeholder{
+  width: 100%;
+  height: 100%;
+}
 
 .overlay-card .img-placeholder img {
-  height: 530px;
+  height: 100%;
   object-fit: cover;
   width: 100%;
 }
