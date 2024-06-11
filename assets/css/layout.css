@@ -554,6 +554,35 @@ header .search-bar-show {
 .number .h5 {
   margin-bottom: 0 !important;
 }
+
+/* overlay card start */
+.overlay-card {
+  position: relative;
+}
+.overlay-card .site-content {
+  position: absolute;
+  bottom: 30px;
+  padding-inline: clamp(1.25rem, 0.8036rem + 1.1905vw, 1.875rem);
+  z-index: 1;
+}
+
+.overlay-card .img-placeholder img {
+  height: 530px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.overlay-card .img-placeholder ::before {
+  content: " ";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+/* overlay card end */
+
 /* # Single Page
 =================================================*/
 
@@ -571,47 +600,66 @@ header .search-bar-show {
 
 .auth-meta img {
   height: 40px;
-  border-radius: 50%;
 }
 
-/* Blog sidebar_____________start */
-.sidebar {
-  position: sticky;
-  top: 80px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+/* table of contents start */
+.sidebar-menu-class {
+  position: relative;
+  right: 0;
+  width: 100%;
 }
 
-.sidebar .co-aut {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  border-radius: 4px;
-  padding: 15px;
+.sidebar-menu-class:before {
+  content: "";
+  height: 69px;
+  left: 1px;
+  position: absolute;
+  top: 1px;
+  width: 95%;
+  z-index: 10;
 }
 
-.sidebar .co-img {
+.sidebar-menu-class ul.table-list {
+  height: 600px;
+  overflow-y: scroll;
+  padding: 80px 1px 1px;
   position: relative;
 }
 
-.sidebar .co-aut img {
-  width: 40px;
-  height: 40px;
-  border-radius: 4px;
+.sidebar-menu-class ul.table-list li::before{
+  display: none;
 }
 
-.sidebar .co-img::after {
+.sidebar-menu-class ul li {
+  margin-bottom: 0;
+  padding: 5px 0px;
+}
+
+.sidebar-menu-class .table-h {
+  align-items: center;
+  display: flex;
+  height: 54px;
+  left: -15px;
   position: absolute;
-  content: "";
-  width: 30px;
-  height: 30px;
-  right: -14px;
-  bottom: -13px;
+  top: 15px;
+  width: 100%;
+  z-index: 10;
 }
 
-/* table of contents */
+#icon-position {
+  margin-left: 14px;
+  margin-right: 0;
+  opacity: 0;
+  visibility: none;
+}
 
+.table-ribbon:before {
+  content: "";
+  left: -15px;
+  position: absolute;
+  top: 55px;
+}
+/* table of contents end */
 
 /* Blog Contents _____________start */
 
@@ -621,7 +669,6 @@ table {
 }
 
 table tr:first-child th {
-  border-radius: 4px 4px 0px 0px;
   height: 45px;
   padding: 16px;
 }
@@ -632,7 +679,6 @@ table tr td {
 }
 
 /* related post */
-
 blockquote {
   padding: 25px;
   position: relative;
