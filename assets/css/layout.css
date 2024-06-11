@@ -622,7 +622,7 @@ header .search-bar-show {
 .sidebar-menu-class ul.table-list {
   height: 600px;
   overflow-y: scroll;
-  padding: clamp(0rem, -2.4554rem + 6.5476vw, 3.4375rem) 1px 1px;
+  /* padding: clamp(0rem, -2.4554rem + 6.5476vw, 3.4375rem) 1px 1px; */
   position: relative;
   padding-left: 0px !important;
 }
@@ -636,23 +636,23 @@ header .search-bar-show {
   padding: 5px 0px;
 }
 
-.sidebar-menu-class .table-h {
+/* .sidebar-menu-class .table-h {
   align-items: center;
   display: flex;
   height: 54px;
-  /* left: -15px; */
   position: absolute;
-  /* top: 15px; */
   width: 100%;
   z-index: 10;
+} */
+.table-h svg{
+  cursor: pointer;
 }
-
-#icon-position {
+/* #icon-position {
   margin-left: 14px;
   margin-right: 0;
   opacity: 0;
   visibility: none;
-}
+} */
 
 /* .table-ribbon:before {
   content: "";
